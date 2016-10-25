@@ -78,6 +78,8 @@ func whoamI(w http.ResponseWriter, req *http.Request) {
 			time.Sleep(duration)
 		}
 	}
+	meetup := "Docker Bochum"
+	fmt.Fprintln(w, "Hello ! What's up", meetup)
 	hostname, _ := os.Hostname()
 	fmt.Fprintln(w, "Hostname:", hostname)
 	ifaces, _ := net.Interfaces()
